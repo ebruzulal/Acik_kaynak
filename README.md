@@ -67,3 +67,83 @@ komutları yazınız?
 Komut: Is 5
 
 Komut: Is-1+
+
+
+------------------------
+
+
+Adım 1: cd Masaüstü
+Masaüstü dizinine geçilir.
+
+Adım 2: touch guvenlik.txt
+Boş bir guvenlik.txt dosyası oluşturulur.
+
+Adım 3: cat > guvenlik.txt
+guvenlik.txt dosyasına kullanıcıdan veri girişi alınır. (Kullanıcıdan “CİSEN” ile başlayan veriler girilmiş)
+
+Adım 4: Ctrl+D
+cat komutundan çıkılır ve dosya kaydedilir.
+
+Adım 5: cat >> guvenlik.txt
+guvenlik.txt dosyasına veri eklemek için tekrar giriş yapılır.
+
+Adım 6: Kullanıcı yeni veri girer
+
+Adım 7: Ctrl+D ile veri girişi tamamlanır ve dosya kapanır.
+Son olarak cat guvenlik.txt ile dosya içeriği görüntülenir.
+
+2. cat -n /etc/passwd komutunun işlevi:
+
+Açıklama:
+/etc/passwd dosyasını satır numaralarıyla birlikte ekrana yazdırır.
+-n parametresi, satır numaralarını görüntülemeye yarar.
+
+3.
+
+$ echo Açık Kaynak > ders1.txt
+$ echo İşletim Sistemi > ders2.txt
+$ cat ders1.txt ders2.txt
+
+Ekran Çıktısı:
+
+Açık Kaynak
+İşletim Sistemi
+
+4. Sadece 2. satırı görüntülemek için:
+
+Komut:
+
+sed -n '2p' Deneme.txt
+
+5. passwd dosyasının ilk ve son 5 satırını görüntülemek için:
+
+Komut:
+
+head -n 5 /etc/passwd
+tail -n 5 /etc/passwd
+
+6. 
+touch okul.txt
+echo "Adınız Soyadınız" > okul.txt
+echo "Okuduğunuz bölüm" >> okul.txt
+cat okul.txt
+wc -w okul.txt
+wc -m okul.txt
+
+7.
+touch ben.txt program.txt
+echo "Ad Soyad Memleket" > ben.txt
+echo -e "Python\tC++\tJava" > program.txt
+paste ben.txt program.txt > birlestirme.txt
+mkdir komut
+mv birlestirme.txt komut/
+
+8. 
+mkdir yetki
+cd yetki
+touch yetkilendirme.txt
+ls -l
+chmod 722 yetkilendirme.txt
+ls -l
+
+
